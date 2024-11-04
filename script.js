@@ -187,7 +187,7 @@ lines');
 console.log(`String
 multiple
 lines`);
-*/
+
 
 // Taking Decisions: if / else Statements
 const age1 = 19;
@@ -205,22 +205,158 @@ const birthYear = 1999;
 let century;
 if (birthYear <= 2000) {
   century = 20;
-} 
+}
 else {
   century = 21;
 }
 console.log(century);
 
 let age = 5;
-     if(age>18){
-         console.log("You can drink water");
-     }
-     else if(age==2){
-         console.log("Age is 2")
-     }
-     else if(age==5){
-         console.log("Age is 5")
-     }
-     else{
-         console.log("You can drink Cold Drink");
-     }
+if (age > 18) {
+  console.log("You can drink water");
+}
+else if (age == 2) {
+  console.log("Age is 2")
+}
+else if (age == 5) {
+  console.log("Age is 5")
+}
+else {
+  console.log("You can drink Cold Drink");
+}
+
+// Coding Challenge #2
+
+
+// Use the BMI example from Challenge #1, and the code you already wrote, and improve it:
+
+// 1. Print a nice output to the console, saying who has the higher BMI. The message can be either "Sahil's BMI is higher than Sohan's!" or "Sohan's BMI is higher than Sahil's!"
+// 2. Use a template literal to include the BMI values in the outputs. Example: "Sahil's BMI (28.3) is higher than Sohan's (23.9)!"
+
+const massSahil = 78;
+const heightSahil = 1.69;
+const massSohan = 92;
+const heightSohan = 1.95;
+
+// const massSahil = 95;
+// const heightSahil = 1.88;
+// const massSohan = 85;
+// const heightSohan = 1.76;
+
+const BMISahil = massSahil / heightSahil ** 2;
+const BMISohan = massSohan / (heightSohan * heightSohan);
+console.log(BMISahil, BMISohan);
+
+if (BMISahil > BMISohan) {
+  console.log(`Sahil's BMI (${BMISahil}) is higher than Sohan's(${BMISohan}) !`)
+}
+else {
+  console.log(`Sohan's BMI(${BMISohan}) is higher than Sahil's(${BMISahil}) !`)
+}
+
+// Type conversion 
+let myVar;
+myVar = String(34);//number into a String
+// console.log(myVar, (typeof myVar));
+// let booleanVar = String(true); //boolean into a String
+// console.log(booleanVar, (typeof booleanVar));
+
+let date = String(new Date()); //object into a String
+// console.log(date, (typeof date));
+
+// let arr = String([1, 2, 3, 4, 5]); //Array into a String length = 9
+let arr = [1, 2, 3, 4, 5]; //Array into a String length = 5
+console.log(arr.length, (typeof arr)); 
+//length is a property of JavaScript strings, arrays, and some other objects that returns the number of characters or elements in that object.
+
+let i = 75;
+// console.log(i.toString())
+
+let stri = Number("3434"); //number
+stri = Number("343d4"); //not a number 
+stri = Number(false); //false = 0 and true = 1
+stri = Number([1, 2, 3, 4, 5, 6, 7, 8, 9]); // if we use array or String it will show NaN = not a number
+// console.log(stri, (typeof stri));
+
+let number = parseFloat('34.098');// parseInt('34')  parseFloat('34.098') 
+
+//The toFixed() method rounds the string to a specified number of decimals.
+// console.log(number.toFixed(2), (typeof number)); 
+
+
+// Type coercion
+let mystr = Number("698");
+let mynum = 34;
+// let mynum = '34';// String
+console.log(mystr + mynum);
+
+
+// Truthy and Falsy Values
+
+// 5 falsy values: 0, '', undefined, null, NaN
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean('Jonas'));
+console.log(Boolean({}));
+console.log(Boolean(''));
+
+const money = 100;
+if (money) {
+  console.log("Don't spend it all ");
+} else {
+  console.log('You should get a job!');
+}
+
+let height = 0;
+if (height) {
+  console.log('YAY! Height is defined');
+} else {
+  console.log('Height is UNDEFINED');
+}
+*/
+// Equality Operators: == vs. ===
+const age = '18';
+if (age === 18) console.log('You just became an adult :D (strict)');
+
+if (age == 18) console.log('You just became an adult :D (loose)');
+
+const favourite = Number(prompt("What's your favourite number?"));
+console.log(favourite);
+console.log(typeof favourite);
+
+if (favourite === 23) { // 22 === 23 -> FALSE
+  console.log('Cool! 23 is an amzaing number!')
+} else if (favourite === 7) {
+  console.log('7 is also a cool number')
+} else if (favourite === 9) {
+  console.log('9 is also a cool number')
+} else {
+  console.log('Number is not 23 or 7 or 9')
+}
+
+if (favourite !== 23) console.log('Why not 23?');
+
+
+// Logical Operators
+const hasDriversLicense = true; // A
+const hasGoodVision = true; // B
+
+console.log(hasDriversLicense && hasGoodVision);
+console.log(hasDriversLicense || hasGoodVision);
+console.log(!hasDriversLicense);
+
+// if (hasDriversLicense && hasGoodVision) {
+//   console.log('Sohan is able to drive!');
+// } else {
+//   console.log('Someone else should drive...');
+// }
+
+const isTired = false; // C
+console.log(hasDriversLicense && hasGoodVision && isTired);
+
+if (hasDriversLicense && hasGoodVision && !isTired) {
+  console.log('Sohan is able to drive!');
+} else {
+  console.log('Someone else should drive...');
+}
+
