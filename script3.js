@@ -53,21 +53,58 @@ const num = 30
 // num = 32; // we cannot change value const ERROR!
 console.log(num);
 
+// mutable and immutable javascript
+// mutable
+let myNum = 27;
+let myString = "hi how are you";
+
+let myNum2 = myNum;
+let myString2 = myString;
+
+myNum2 = myNum2 - 5;
+myString2 = myString2 += "doing";
+
+console.log(myNum);
+console.log(myNum2);
+console.log(myString);
+console.log(myString2);
+
+
+// immutable
+const myobj = { name: 'WittCode' };
+const myArray = [0, 1, 2];
+
+const my0bj2 = myobj;
+const myArray2 = myArray;
+
+my0bj2.soccer = "fun";
+myArray2.push(3);
+
+console.log(myobj);
+console.log(my0bj2);
+
+console.log(myArray);
+console.log(myArray2);
+
 // Functions
-// simple function
+// A function is a reusable block of code that can be defined and then executed whenever needed.
+// Function Statement
 function hello() {
     console.log("hello have are you");
 }
 hello();//calling a function
 
+//Anonymous functions
+
 //   perameter function
-function addTwoNumbers(number1, number2, num=1) {
-    let result = number1 + number2 + num
-    return result
-    // return number1+number2
+function addTwoNumbers(number1, number2,) {
+    // let result = number1 + number2 
+    // return result
+    return number1 + number2
 }
-const result = addTwoNumbers(5, 4, 5)
-console.log("result:", result);
+// const result = addTwoNumbers(5, 4)
+// console.log("result:", result);
+console.log(addTwoNumbers(2, 2));
 
 
 const result1 = addTwoNumbers(2, 4)
@@ -99,3 +136,32 @@ sameName();
 
 hello(); //calling a function
 sum(25, 5);// perameter function calling
+
+// Anonymous functions
+var greet = function () {
+    console.log("Welcome sohan!");
+};
+
+greet();
+
+// function name
+// Normal functions with a name or identifier are known as named functions.
+
+function test() {
+    console.log(`This is a named function!`);
+};
+
+//Arrow Function 
+const sun = () => {
+    console.log("Welcome sohan!");
+}
+
+sun();
+
+// first class function
+// A programming language is said to have First-class functions if functions in that language are treated like other variables. So the functions can be assigned to any other variable or passed as an argument or can be returned by another function.
+
+function add(x, y) {  
+    return x + y;  
+}  
+let sum = add; 
