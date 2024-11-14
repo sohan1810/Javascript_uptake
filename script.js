@@ -64,7 +64,8 @@ console.log(typeof year);
 year = 1991;
 console.log(typeof year);
 
-console.log(typeof null); 
+console.log(typeof null);
+ 
 
 // let, const and var
 
@@ -301,14 +302,14 @@ console.log(Boolean('Jonas'));
 console.log(Boolean({}));
 console.log(Boolean(''));
 
-const money = 100;
+const money = 100; //true
 if (money) {
   console.log("Don't spend it all ");
 } else {
   console.log('You should get a job!');
 }
 
-let height = 0;
+let height = 0;//false
 if (height) {
   console.log('YAY! Height is defined');
 } else {
@@ -316,27 +317,13 @@ if (height) {
 }
 
 // Equality Operators: (== value are same) vs. (=== value are same and data type same)  
-const age = '18';
-if (age === 18) console.log('You just became an adult :D (strict)');
+const sum = 10;
+const sun = "10";
+console.log(sum== sun);
 
-if (age == 18) console.log('You just became an adult :D (loose)');
-
-const favourite = Number(prompt("What's your favourite number?"));
-console.log(favourite);
-console.log(typeof favourite);
-
-if (favourite === 23) { // 22 === 23 -> FALSE
-  console.log('Cool! 23 is an amzaing number!')
-} else if (favourite === 7) {
-  console.log('7 is also a cool number')
-} else if (favourite === 9) {
-  console.log('9 is also a cool number')
-} else {
-  console.log('Number is not 23 or 7 or 9')
-}
-
-if (favourite !== 23) console.log('Why not 23?');
-
+conts sum = 20;
+conts sun = "20";
+console.log(sum === sun);
 
 // Logical Operators
 &&,||, ! are Operators

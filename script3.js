@@ -118,11 +118,11 @@ console.log("result:", result1);
 
 hello();//calling a function
 
-function sum(a, b) {
-    console.log(a + b);
-}
+// function sum(a, b) {
+//     console.log(a + b);
+// }
 
-sum(35, 5);
+// sum(35, 5);
 
 
 // Function declaration 
@@ -140,14 +140,14 @@ let sameName = function show() {
 sameName();
 
 hello(); //calling a function
-sum(25, 5);// perameter function calling
+// sum(25, 5);// perameter function calling
 
 // Anonymous functions
-var greet = function () {
-    console.log("Welcome sohan!");
-};
+// var greet = function () {
+//     console.log("Welcome sohan!");
+// };
 
-greet();
+// greet();
 
 // function name
 // Normal functions with a name or identifier are known as named functions.
@@ -194,8 +194,8 @@ console.log(person1.greet());
 //     }
 // }
 
-obj.normal();
-obj.arrow();
+// obj.normal();
+// obj.arrow();
 
 console.log(person1.greet());
 
@@ -211,13 +211,13 @@ console.log(person1.greet());
 function add(x, y) {
     return x + y;
 }
-let sum = add;
+// let sum = add;
 
 // Assigning Functions to Variables
-const greet = function (name) {
-    console.log(`Hello, ${name}!`);
-};
-greet('Sohan');
+// const greet = function (name) {
+//     console.log(`Hello, ${name}!`);
+// };
+// greet('Sohan');
 
 
 // Passing Functions as Arguments
@@ -291,7 +291,7 @@ obj.arrow();
 //         return `Hello , you are ${this.age} years old`
 //     }
 // }
-console.log(person.greet());
+// console.log(person.greet());
 
 /////////////////////////////////////
 const person = {
@@ -306,6 +306,7 @@ console.log(person.greet());
 
 /////////////////////////////////
 // JavaScript new keyword is used to create an instance of an object that has a constructor function.
+// A constructor is a function that executes the initialization of an object when the object is created.
 // ConstructorFunction: A class or function that specifies the type of the object instance.
 // Arguments: A list of values that the constructor will be called with.
 // This example shows the use of a new keyword.
