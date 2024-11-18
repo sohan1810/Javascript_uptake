@@ -1,4 +1,4 @@
-
+/*
 // Numbers:
 let length = 20;
 let weight = 5.7;
@@ -321,3 +321,155 @@ const fruit1 = new Fruit('Yellow', 'Sweet', 1);
 
 // Display the result
 console.log(fruit1.color);
+
+// IIFE - Immediately Invoked Function Expressions javascript
+// Immediately Invoked Function Expressions (IIFE) are JavaScript functions that are executed immediately after they are defined.
+// They are typically used to create a local scope for variables to prevent them from polluting the global scope.
+
+(function s() {
+    console.log(`sohan`);
+  })();   //if we don't give ";" the error will come  
+  
+  ((name) => {
+    console.log(`my name is ${name}`);
+  })('sohan')
+  
+  
+
+  //////////
+ /* Back to the two gymnastics teams, the Dolphins and the Koalas! There is a new gymnastics discipline, which works differently.
+Each team competes 3 times, and then the average of the 3 scores is calculated (so one average score per team).
+A team ONLY wins if it has at least DOUBLE the average score of the other team. Otherwise, no team wins!
+
+1. Create an arrow function 'calcAverage' to calculate the average of 3 scores
+2. Use the function to calculate the average for both teams
+3. Create a function 'checkWinner' that takes the average score of each team as parameters ('avgDolhins' and 'avgKoalas'), and then logs the winner to the console, together with the victory points, according to the rule above. Example: "Koalas win (30 vs. 13)".
+4. Use the 'checkWinner' function to determine the winner for both DATA 1 and DATA 2.
+5. Ignore draws this time.
+
+TEST DATA 1: Dolphins score 44, 23 and 71. Koalas score 65, 54 and 49
+TEST DATA 2: Dolphins score 85, 54 and 41. Koalas score 23, 34 and 27
+
+HINT: To calculate average of 3 values, add them all together and divide by 3
+HINT: To check if number A is at least double number B, check for A >= 2 * B. Apply this to the team's average scores 😉
+*/
+
+/*
+const calcAverage = (a, b, c) => (a + b + c) / 3;
+console.log(calcAverage(3, 4, 5));
+
+// Test 1
+let scoreDolphins = calcAverage(44, 23, 71);
+let scoreKoalas = calcAverage(65, 54, 49);
+console.log(scoreDolphins, scoreKoalas);
+
+const checkWinner = function (avgDolphins, avgKoalas) {
+  if (avgDolphins >= 2 * avgKoalas) {
+    console.log(`Dolphins win 🏆 (${avgDolphins} vs. ${avgKoalas})`);
+  } else if (avgKoalas >= 2 * avgDolphins) {
+    console.log(`Koalas win 🏆 (${avgKoalas} vs. ${avgDolphins})`);
+  } else {
+    console.log('No team wins...');
+  }
+}
+checkWinner(scoreDolphins, scoreKoalas);
+
+checkWinner(576, 111);
+
+// Test 2
+scoreDolphins = calcAverage(85, 54, 41);
+scoreKoalas = calcAverage(23, 34, 27);
+console.log(scoreDolphins, scoreKoalas);
+checkWinner(scoreDolphins, scoreKoalas);
+
+
+
+// An array in JavaScript is a type of global object used to store data. Arrays can store multiple values in a single variable, which can condense and organize our code.
+
+let mark = [90, 80 ,73, 62, false, "not present"]
+console.log(mark[0])
+console.log(mark[1])
+console.log(mark[2])
+console.log(mark[3])
+console.log(mark[4])
+console.log(mark[5])
+console.log(" length of array", mark.length);
+mark.push("Node.js");
+mark.unshift("Web Development");
+let a = mark.pop();
+console.log("After Removing the last: " + a);
+let ab = mark.shift();
+console.log("After Removing the First: " + ab);
+mark.splice(1, 2);
+console.log("After Removing 2 elements starting from index 1: " + a);
+// mark[6] = 55//adding a new value of array
+// mark[0] = 95//changing the value of a array
+console.log(mark)
+// console.log(typeof mark);
+
+// array concat 
+// Creating an Array and Initializing with Values
+let c = ["HTML", "CSS", "JS", "React"];
+let b = ["Node.js", "Expess.js"];
+
+// Concatenate both arrays
+let concateArray = c.concat(b);
+
+console.log("Concatenated Array: ", concateArray);
+
+//array tostring()
+let a = ["HTML", "CSS", "JS"];
+
+// Convert array ot String
+console.log(a.toString());
+console.log(a.flat());
+
+// array flat()
+let a = [[1, 2], 3, [4, 5]];
+let b = [1, 2, 3, 4, 5, 6, 7, 8]
+console.log(a.flat());
+// console.log(b.slice(1));
+
+// Array toSpliced
+const months = ["Jan", "Mar", "Apr", "May"];
+
+const months2 = months.toSpliced(1, 1, "Feb");
+console.log(months2);
+console.log(months.includes('Jan'));
+console.log(months.includes('jun'));
+
+console.log(months.indexOf('Jan'));
+console.log(months.indexOf('jun'));
+
+
+// Array delete
+const Employee = {
+    firstname: 'sohan',
+    lastname: 'javiya',
+};
+
+console.log(Employee.firstname);
+
+delete Employee.firstname;
+
+console.log(Employee.firstname);
+
+// // array at() 
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// let fruit = fruits.at(2);
+// console.log(fruit)
+
+// const calcAge = function (birthYeah) {
+//     return 2037 - birthYeah;
+//   }
+//   const years = [1990, 1967, 2002, 2010, 2018];
+  
+//   const age1 = calcAge(years[0]);
+//   const age2 = calcAge(years[1]);
+// //   const age3 = calcAge(years[4]);
+//   const age3 = calcAge(years[years.length - 2]);
+//   console.log(age1, age2, age3);
+  
+//   const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])];
+//   console.log(ages);
+  */

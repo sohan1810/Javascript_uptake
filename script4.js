@@ -191,11 +191,11 @@
 //     age: 50,
 //     eyeColor: "blue"
 //   };
-  
+
 //   let id = Symbol('id');
 //   person[id] = 140353;
 //   console.log(person[id]);
-  
+
 
 // Truthy and Falsy Values
 
@@ -225,7 +225,7 @@
 // simple function
 hello();
 function hello() {
-    console.log("hello have are you");
+  console.log("hello have are you");
 }
 
 hello();
@@ -233,9 +233,9 @@ hello();
 
 //   perameter function
 function addTwoNumbers(number1, number2) {
-    let result = number1 + number2
-    return result
-    // result number1+number2
+  let result = number1 + number2
+  return result
+  // result number1+number2
 }
 
 const result = addTwoNumbers(5, 4)
@@ -243,57 +243,57 @@ const result = addTwoNumbers(5, 4)
 console.log("result:", result);
 
 
-  
-  // Function declaration
-  show();
-  function show(){
-    console.log("sohan");
-  }
 
- // Function expression
-  let sameName= function show(){
-    console.log("sohan");
-  }  
-  sameName();
-  
+// Function declaration
+show();
+function show() {
+  console.log("sohan");
+}
 
- // Function anonymous
-  let sameName1= function (){
-    console.log("sohan1");
-  }  
-  sameName1();
+// Function expression
+let sameName = function show() {
+  console.log("sohan");
+}
+sameName();
 
-  //arrow function
-  const h = (x, y, z = 30) => {
-    console.log(x + " " + y + " " + z); //10 20 30
-    console.log(x+y+z);//60
-    
+
+// Function anonymous
+let sameName1 = function () {
+  console.log("sohan1");
+}
+sameName1();
+
+//arrow function
+const h = (x, y, z = 30) => {
+  console.log(x + " " + y + " " + z); //10 20 30
+  console.log(x + y + z);//60
+
 }
 
 h(10, 20);
 
 
 function second_func(greeting, message, name) {
-    console.log(`${greeting} ${name} ${message} `);
+  console.log(`${greeting} ${name} ${message} `);
 }
 
 second_func("sohan is learing", 'from GeeksForGeeks', 'JavaScript');
 
 // this.
 const person = {
-    name: "ram",
-    age: 22,
-    greet: function () {
-        return `Hello ${this.name}, you are ${this.age} years old`
-    }
+  name: "ram",
+  age: 22,
+  greet: function () {
+    return `Hello ${this.name}, you are ${this.age} years old`
+  }
 }
 console.log(person.greet());
 
 // constructor function
 function Fruit(color, taste, seeds) {
-    this.color = color;
-    this.taste = taste;
-    this.seeds = seeds;
+  this.color = color;
+  this.taste = taste;
+  this.seeds = seeds;
 }
 
 // Create an object
