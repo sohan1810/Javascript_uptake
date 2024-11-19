@@ -459,6 +459,7 @@ console.log(Employee.firstname);
 // let fruit = fruits.at(2);
 // console.log(fruit)
 
+fuction and array
 // const calcAge = function (birthYeah) {
 //     return 2037 - birthYeah;
 //   }
@@ -466,10 +467,152 @@ console.log(Employee.firstname);
   
 //   const age1 = calcAge(years[0]);
 //   const age2 = calcAge(years[1]);
-// //   const age3 = calcAge(years[4]);
+//   const age3 = calcAge(years[4]);
 //   const age3 = calcAge(years[years.length - 2]);
 //   console.log(age1, age2, age3);
   
 //   const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])];
 //   console.log(ages);
-  */
+
+
+// Coding Challenge #2
+
+
+// Steven is still building his tip calculator, using the same rules as before: Tip 15% of the bill if the bill value is between 50 and 300, and if the value is different, the tip is 20%.
+
+// 1. Write a function 'calcTip' that takes any bill value as an input and returns the corresponding tip, calculated based on the rules above (you can check out the code from first tip calculator challenge if you need to). Use the function type you like the most. Test the function using a bill value of 100.
+// 2. And now let's use arrays! So create an array 'bills' containing the test data below.
+// 3. Create an array 'tips' containing the tip value for each bill, calculated from the function you created before.
+// 4. BONUS: Create an array 'total' containing the total values, so the bill + tip.
+
+// TEST DATA: 125, 555 and 44
+
+// HINT: Remember that an array needs a value in each position, and that value can actually be the returned value of a function! So you can just call a function as array values (so don't store the tip values in separate variables first, but right in the new array) 😉
+ 
+const calcTip = function (bill) {
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}
+
+const bills = [125, 555, 44];
+// const tips1 = calcTip(bills[0]);
+// const tips2 = calcTip(bills[1]);
+// const tips3 = calcTip(bills[2]);
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+
+console.log(bills, tips, totals);
+
+// Introduction to Objects
+
+// Array
+const jonasArray = [
+    'sohan',
+    'javiya',
+    2024 - 2002,
+    'frontend developer',
+    ['sahil', 'jay', 'dev']
+  ];
+  
+//   Object
+  const jonas = {
+    firstName: 'sohan',
+    lastName: 'javiya',
+    age: 2024 - 2002,
+    job: 'frontend developer',
+    friends: ['sahil', 'jay', 'dev']
+  };
+  
+//   Object method 
+
+const list = {
+    firstName: 'sohan',
+    lastName: 'javiya',
+    age: 2024 - 2002,
+    job: 'frontend developer',
+    friends: ['sahil', 'jay', 'dev'],
+    salary: function () {
+        return 20000;
+    },
+    fname: function () {
+        return this.firstName + " " + this.lastName;
+        // return firstName + " " +lastName;// firstName is not defined at Object.fname
+    }
+};
+console.log(list);
+console.log(list.friends);
+console.log(list.age);
+console.log(list.salary());
+console.log(list.fname());
+
+// Dot vs. Bracket Notation
+const listarr = {
+    firstName: 'sohan',
+    lastName: 'javiya',
+    age: 2024 - 2002,
+    job: 'frontend developer',
+    friends: ['sahil', 'jay', 'dev']
+  };
+console.log(listarr);
+
+console.log(listarr.lastName);
+console.log(listarr['lastName']);
+
+const nameKey = 'Name';
+console.log(listarr['first' + nameKey]);
+console.log(listarr['last' + nameKey]);
+
+// console.log(listarr.'last' + nameKey)
+
+// const interestedIn = prompt('What do you want to know about listarr? Choose between firstName, lastName, age, job, and friends');
+// console.log(listarr[interestedIn]);
+
+// Challenge
+// "Jonas has 3 friends, and his best friend is called Michael"
+console.log(`${listarr.firstName} has ${listarr.friends.length} friends, and his best friend is called ${listarr.friends[2]}`);
+
+// Coding Challenge #3
+
+
+Let's go back to sahil and sohan comparing their BMIs! This time, let's use objects to implement the calculations! Remember: BMI = mass / height ** 2 = mass / (height * height). (mass in kg and height in meter)
+
+1. For each of them, create an object with properties for their full name, mass, and height (sahil javiya and sohan javiya)
+2. Create a 'calcBMI' method on each object to calculate the BMI (the same method on both objects). Store the BMI value to a property, and also return it from the method.
+3. Log to the console who has the higher BMI, together with the full name and the respective BMI. Example: "sohan javiya's BMI (28.3) is higher than sahil javiya's (23.9)!"
+
+TEST DATA: sahils weights 78 kg and is 1.69 m tall. sohan weights 92 kg and is 1.95 m tall.
+
+
+const sahil = {
+  fullName: 'sahil javiya',
+  mass: 78,
+  height: 1.69,
+  calcBMI: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  }
+};
+
+const sohan = {
+  fullName: 'sohan javiya',
+  mass: 92,
+  height: 1.95,
+  calcBMI: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  }
+};
+
+sahil.calcBMI();
+sohan.calcBMI();
+
+console.log(sahil.bmi, sohan.bmi);
+
+// "sohan javiya's BMI (28.3) is higher than sahil javiya's (23.9)!"
+
+if (sahil.bmi > sohan.bmi) {
+  console.log(`${sahil.fullName}'s BMI (${sahil.bmi}) is higher than ${sohan.fullName}'s BMI (${sohan.bmi})`)
+} else if (sohan.bmi > sahil.bmi) {
+  console.log(`${sohan.fullName}'s BMI (${sohan.bmi}) is higher than ${sahil.fullName}'s BMI (${sahil.bmi})`)
+}
+
+ */
