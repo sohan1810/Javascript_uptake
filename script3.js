@@ -615,4 +615,102 @@ if (sahil.bmi > sohan.bmi) {
   console.log(`${sohan.fullName}'s BMI (${sohan.bmi}) is higher than ${sahil.fullName}'s BMI (${sahil.bmi})`)
 }
 
+// loop
+// for loop
+
+// for(let i = 1; i <= 20; i++ ){
+//   console.log(i);
+// }
+
+
+// let n = prompt("Enter a number!!");
+// let sum = 0;
+// for (let i = 0; i < n; i++) {
+//   sum += (i + 1);
+//   console.log((i+1), "+")
+// }
+// console.log(sum);
+
+// Looping Arrays, Breaking and Continuing
+// const sohanArr = [
+//   'sohan',
+//   'javiya',
+//   2024 - 2002,
+//   'frontend developer',
+//   ['sahil', 'jay', 'dev'],
+//   true
+// ];
+
+// for (let i = 0; i < 6; i++) {
+//   console.log(sohanArr[i]);
+//  }
+
+
+// const sohanArr = [
+//   'sohan',
+//   'javiya',
+//   2024 - 2002,
+//   'frontend developer',
+//   ['sahil', 'jay', 'dev'],
+//   true,
+//   9145623481
+// ];
+// const types = [];
+
+// for (let i = 0; i < sohanArr.length; i++) {
+  // Reading from sohanArr array
+    // console.log(sohanArr[i]);
+  // console.log(sohanArr[i], typeof sohanArr[i]);
+
+  // Filling types array only for try out 
+  // types[i] = typeof sohanArr[i];
+  // types.push(typeof sohanArr[i]);
+// }
+
+// console.log(types);
+
+// const years = [1971, 2002, 1975, 2020];
+// const ages = [];
+
+// for (let i = 0; i < years.length; i++) {
+//   ages.push(2024 - years[i]);
+// }
+// console.log(ages);
+
+// continue and break
+for(let i = 1; i <= 10; i++ ){
+  if (i == 5) {
+    console.log("sohan" + i + "<br>");
+    // continue;
+    break;
+  }
+  console.log("num" + i + "<br>");
+}
+
+
+// Looping Backwards and Loops in Loops
+const jonas = [
+  'Jonas',
+  'Schmedtmann',
+  2037 - 1991,
+  'teacher',
+  ['Michael', 'Peter', 'Steven'],
+  true
+];
+
+// 0, 1, ..., 4
+// 4, 3, ..., 0
+
+for (let i = jonas.length - 1; i >= 0; i--) {
+  console.log(i, jonas[i]);
+}
+
+for (let exercise = 1; exercise < 4; exercise++) {
+  console.log(`-------- Starting exercise ${exercise}`);
+
+  for (let rep = 1; rep < 6; rep++) {
+    console.log(`Exercise ${exercise}: Lifting weight repetition ${rep} 🏋️‍♀️`);
+  }
+}
  */
+
