@@ -713,4 +713,106 @@ for (let exercise = 1; exercise < 4; exercise++) {
   }
 }
  */
+//push, pop, unshift, shift, at, sort, reverse, join, includes, indexOf 
+// const sum = [1, 2, 3, 4, 5];
+// let a = sum.at(2);
+// const b = new Array(7, 6, 5, 4, 3, 2, 1, 0);
+// // b.push(1);
+// // b.push(2);
+// // b.push(3);
+// // b.push(4);
+// // b.push(5);
+// // b.push(6);
+// // b.push(7);
+// b.push(8);
+// // b.pop();
+// b.unshift(22);
+// // b.shift(22);
+// b.sort();
+// b.reverse();
+// const c = b.join();
+// console.log(sum);
+// console.log(a);
+// console.log(b);
+// console.log(c, typeof c);
+// console.log(sum.includes(5));
+// console.log(b.indexOf(3));
+
+/////////////////////////////////////////////////////
+// // slice, splice
+// const myArr = [0, 1, 2, 3, 4, 5]
+// console.log("A ", myArr);
+
+// const myn1 = myArr.slice(1, 3)
+// console.log(myn1);
+
+// console.log("B ", myArr);
+
+// const myn2 = myArr.splice(1, 3)
+// console.log(myn2);
+
+// console.log("C ", myArr);
+
+///////////////////////////////////////////
+//  Array filter()
+// const ages = [32, 33, 16, 12, 66, 6, 18, 40];
+// const checkAdult = ages.filter((a)=>{
+//     return a > 18;
+// })
+//  console.log(checkAdult);
+//  console.log(ages);
+
+ //////////////////////////////////
+//  map
+// creates a new array by performing Some operation on Each array element.
+//  const numbers = [65, 44, 12, 4];
+// const newArr = numbers.map(function myFunction(num) {
+//   return num - 10;
+// })
+
+// function myFunction(num) {
+//   return num - 10;
+// }
+// console.log(newArr);
+///////////////////////////////////////////////////
+//reduce
+// It is useful for doing operations like max in an array, min in an array and sum of array.
+// let arr1 = [10, 20, 30, 40, 50];
+// let newArr = arr1.reduce((s1, s2)=>{
+//     return s1 + s2;
+// })
+//   console.log(newArr);
+
+// })
+
+/////////////////////////////////////////////////////////
+//find & findIndex
+
+// let array = [10, 20, 30, 40, 50];
+
+// let found = array.find(function (element) {
+//     return element > 20;
+// });
+
+// console.log(found);
+
+
+/////////////////////////////////////////////////////////
+// //Entries
+// The entries() method in JavaScript is used to create an iterator that returns key/value pairs for each index in the array.
+
+// const array = [1, 2, 3, 4, 5];
+
+// for (const num of array.entries()) {
+//     console.log(num);
+// }
+///////////////////////////////
+//new array()
+// let sum = [1, 2, 3, 4, 5];
+//  console.log(sum);
+ 
+//  sum = new Array(8, 9, 10);
+//  console.log(sum);
+
+
 
