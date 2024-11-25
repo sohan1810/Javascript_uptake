@@ -24,6 +24,52 @@
 // console.log(s("webmaster"));
 
 //////////////////////////////////
+// 3.Write a JavaScript function that accepts a string as a parameter and converts the first letter of each word of the string in upper case.
+// Example string : 'the quick brown fox'
+// Expected Output : 'The Quick Brown Fox'
+
+//////////////////////////////////
+// 4.Write a JavaScript program to calculate number of days left until next Christmas
+// Solution:-
+
+
+//////////////////////////////////
+// 5. Write a JavaScript program that accept two integers and display the larger.
+// Solution:-
+// var num1 = 56
+// var num2 = 89
+// if(num1>num2)
+// {
+//     console.log(num1);
+// }
+// else
+// {
+//     console.log(num2);
+// }
+
+//////////////////////////////////
+// 6.Write a JavaScript for loop that will iterate from 0 to 15. For each iteration, it will
+// check if the current number is odd or even, and display a message to the screen.
+
+// Sample Output :
+// "0 is even"
+// "1 is odd"
+// "2 is even"
+
+// Solution:-
+for (var x = 0; x <= 15; x++) {
+    if (x === 0) {
+        console.log(x + " is even");
+    }
+    else if (x % 2 === 0) {
+        console.log(x + " is even");
+    }
+    else {
+        console.log(x + " is odd");
+    }
+}
+
+//////////////////////////////////
 // 7. You have an array of numbers. Write a function that  double each number in the array.
 // const numbers = [1, 2, 3, 4, 5];
 // Expected output: [2, 4, 6, 8, 10]
@@ -36,7 +82,8 @@
 // console.log(newArr);
 
 ///////////////////////////
-// 9.You have an array of numbers. Write a function that uses the reduce() method to calculate the sum of all the numbers in the array.
+// 9.You have an array of numbers. Write a function that uses the reduce() method
+// to calculate the sum of all the numbers in the array.
 // const numbers = [1, 2, 3, 4, 5];
 // Expected output: 15
 
@@ -49,7 +96,7 @@
 // console.log(newArr);
 
 //////////////////////////////////
-//   10. Given an array of objects representing users, write a function that uses the find() method 
+//   10. Given an array of objects representing users, write a function that uses the find() method
 // to return the user which name is Bob with its specific id
 //   const users = [
 //       { id: 1, name: 'Alice' },
@@ -104,3 +151,142 @@
 // console.log(fruits);
 
 //////////////////////////////////
+
+// 13.Given an object representing a car with properties like make, model, and year,
+// write a function that returns an array of the object's keys.
+
+// const car = {
+//     make: 'Toyota',
+//     model: 'Camry',
+//     year: 2020
+// };
+// Expected output: ['make', 'model', 'year']
+
+// Solution:-
+// const car = {
+//     make: 'Toyota',
+//     model: 'Camry',
+//     year: 2020
+// };
+// function carKeys(car) {
+//     return Object.keys(car);
+// }
+// console.log(carKeys(car));
+
+// 14. Given an object representing a student with properties like name, age, and grade,
+// write a function that returns an array of the object's values.
+
+// const student = {
+//     name: 'Alice',
+//     age: 21,
+//     grade: 'A'
+// };
+// Expected output: ['Alice', 21, 'A']
+
+// Solution:-
+// const student = {
+//     name: 'Alice',
+//     age: 21,
+//     grade: 'A'
+// };
+// function studentValues(student) {
+//     return Object.values(student);
+// }
+// console.log(studentValues(student));
+
+
+// 15.You have an object that stores product details like name, price, and available.
+// Write a function that returns an array of the object's entries (key-value pairs).
+
+// const product = {
+//    name: 'Laptop',
+//    price: 999,
+//    available: true
+// };
+
+// Expected output: [['name', 'Laptop'], ['price', 999], ['available', true]]
+
+// Solution:-
+// const product = {
+//     name: 'Laptop',
+//     price: 999,
+//     available: true
+// };
+// function cars(product) {
+//     return Object.entries(product);
+//   }
+//   console.log(cars(product));
+
+
+// 16. You have two objects representing user details and contact information.
+//  Write a function that combines these two objects into a new object.
+// const userDetails = {
+//     name: 'John',
+//     age: 30
+// };
+// const contactInfo = {
+//     email: 'john@example.com',
+//     phone: '123-456-7890'
+// };
+// Expected output: { name: 'John', age: 30, email: 'john@example.com', phone: '123-456-7890' }
+
+// Solution:-
+// const userDetails = {
+//     name: 'John',
+//     age: 30
+// };
+// const contactInfo = {
+//     email: 'john@example.com',
+//     phone: '123-456-7890'
+// };
+// function cars(userDetails, contactInfo ) {
+//     return Object.assign(userDetails, contactInfo);
+//   }
+// console.log(cars(userDetails, contactInfo));
+
+// 17.Given an object representing a book with properties like title, author, and publishedYear,
+// write a function that checks if the object has a property author.
+// const book = {
+//     title: '1984',
+//     author: 'George Orwell',
+//     publishedYear: 1949
+// };
+// Expected output: true
+
+// Solution:-
+// const book = {
+//     title: '1984',
+//     author: 'George Orwell',
+//     publishedYear: 1949
+// };
+
+// function propertyHas(book) {
+//     return book.hasOwnProperty('author');
+// };
+// console.log(propertyHas(book));
+
+
+// 18.Given an object representing a movie with properties like title, director, and releaseYear,
+//  write a function that returns the number of properties in the object.
+
+// const movie = {
+//     title: 'Inception',
+//     director: 'Christopher Nolan',
+//     releaseYear: 2010
+// };
+
+// Expected output: 3
+
+// Solution:-
+// const movie = {
+//     title: 'Inception',
+//     director: 'Christopher Nolan',
+//     releaseYear: 2010
+// };
+
+// function properties(movie) {
+//     return Object.keys(movie).length;
+// };
+// console.log(properties(movie));
+
+
