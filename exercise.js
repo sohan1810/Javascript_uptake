@@ -28,10 +28,31 @@
 // Example string : 'the quick brown fox'
 // Expected Output : 'The Quick Brown Fox'
 
+// Solution:-
+function uppercase(str)
+{
+  var array1 = str.split(' ');
+  var newarray1 = [];
+    
+  for(var x = 0; x < array1.length; x++){
+      newarray1.push(array1[x].charAt(0).toUpperCase()+array1[x].slice(1));
+  }
+  return newarray1.join(' ');
+}
+console.log(uppercase("the quick brown fox"));
 //////////////////////////////////
 // 4.Write a JavaScript program to calculate number of days left until next Christmas
-// Solution:-
 
+// Solution:-
+today=new Date();
+var cmas=new Date(today.getFullYear(), 11, 25);
+if (today.getMonth()==11 && today.getDate()>25) 
+{
+cmas.setFullYear(cmas.getFullYear()+1); 
+}  
+var one_day=1000*60*60*24;
+console.log(Math.ceil((cmas.getTime()-today.getTime())/(one_day))+
+" days left until Christmas!");
 
 //////////////////////////////////
 // 5. Write a JavaScript program that accept two integers and display the larger.
@@ -58,10 +79,8 @@
 
 // Solution:-
 for (var x = 0; x <= 15; x++) {
-    if (x === 0) {
-        console.log(x + " is even");
-    }
-    else if (x % 2 === 0) {
+   
+     if (x % 2 === 0) {
         console.log(x + " is even");
     }
     else {
@@ -288,5 +307,3 @@ for (var x = 0; x <= 15; x++) {
 //     return Object.keys(movie).length;
 // };
 // console.log(properties(movie));
-
-
