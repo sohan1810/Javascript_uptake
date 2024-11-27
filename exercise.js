@@ -29,30 +29,30 @@
 // Expected Output : 'The Quick Brown Fox'
 
 // Solution:-
-function uppercase(str)
-{
-  var array1 = str.split(' ');
+function uppercase(str) {
+  var array1 = str.split(" ");
   var newarray1 = [];
-    
-  for(var x = 0; x < array1.length; x++){
-      newarray1.push(array1[x].charAt(0).toUpperCase()+array1[x].slice(1));
+
+  for (var x = 0; x < array1.length; x++) {
+    newarray1.push(array1[x].charAt(0).toUpperCase() + array1[x].slice(1));
   }
-  return newarray1.join(' ');
+  return newarray1.join(" ");
 }
 console.log(uppercase("the quick brown fox"));
 //////////////////////////////////
 // 4.Write a JavaScript program to calculate number of days left until next Christmas
 
 // Solution:-
-today=new Date();
-var cmas=new Date(today.getFullYear(), 11, 25);
-if (today.getMonth()==11 && today.getDate()>25) 
-{
-cmas.setFullYear(cmas.getFullYear()+1); 
-}  
-var one_day=1000*60*60*24;
-console.log(Math.ceil((cmas.getTime()-today.getTime())/(one_day))+
-" days left until Christmas!");
+today = new Date();
+var cmas = new Date(today.getFullYear(), 11, 25);
+if (today.getMonth() == 11 && today.getDate() > 25) {
+  cmas.setFullYear(cmas.getFullYear() + 1);
+}
+var one_day = 1000 * 60 * 60 * 24;
+console.log(
+  Math.ceil((cmas.getTime() - today.getTime()) / one_day) +
+    " days left until Christmas!"
+);
 
 //////////////////////////////////
 // 5. Write a JavaScript program that accept two integers and display the larger.
@@ -67,6 +67,24 @@ console.log(Math.ceil((cmas.getTime()-today.getTime())/(one_day))+
 // {
 //     console.log(num2);
 // }
+/////////////OR/////////
+// Function to find the larger of two numbers
+
+// function findLargerNumber() {
+
+//     let num1 = parseInt(prompt("Enter the first number:"));
+//     let num2 = parseInt(prompt("Enter the second number:"));
+
+//     if (num1 > num2) {
+//         console.log("The larger number is: " + num1);
+//     } else if (num2 > num1) {
+//         console.log("The larger number is: " + num2);
+//     } else {
+//         console.log("Both numbers are equal.");
+//     }
+// }
+
+// findLargerNumber();
 
 //////////////////////////////////
 // 6.Write a JavaScript for loop that will iterate from 0 to 15. For each iteration, it will
@@ -78,15 +96,15 @@ console.log(Math.ceil((cmas.getTime()-today.getTime())/(one_day))+
 // "2 is even"
 
 // Solution:-
-for (var x = 0; x <= 15; x++) {
-   
-     if (x % 2 === 0) {
-        console.log(x + " is even");
-    }
-    else {
-        console.log(x + " is odd");
-    }
-}
+// for (var x = 0; x <= 15; x++) {
+
+//      if (x % 2 === 0) {
+//         console.log(x + " is even");
+//     }
+//     else {
+//         console.log(x + " is odd");
+//     }
+// }
 
 //////////////////////////////////
 // 7. You have an array of numbers. Write a function that  double each number in the array.
@@ -213,7 +231,6 @@ for (var x = 0; x <= 15; x++) {
 // }
 // console.log(studentValues(student));
 
-
 // 15.You have an object that stores product details like name, price, and available.
 // Write a function that returns an array of the object's entries (key-value pairs).
 
@@ -235,7 +252,6 @@ for (var x = 0; x <= 15; x++) {
 //     return Object.entries(product);
 //   }
 //   console.log(cars(product));
-
 
 // 16. You have two objects representing user details and contact information.
 //  Write a function that combines these two objects into a new object.
@@ -283,7 +299,6 @@ for (var x = 0; x <= 15; x++) {
 //     return book.hasOwnProperty('author');
 // };
 // console.log(propertyHas(book));
-
 
 // 18.Given an object representing a movie with properties like title, director, and releaseYear,
 //  write a function that returns the number of properties in the object.
