@@ -40,7 +40,6 @@
 // const b = 15;
 // console.log(a <= b);
 
-
 //  Operator Logical
 
 // && || !
@@ -112,7 +111,6 @@
 // let z = x;
 // console.log(z);
 
-
 // Assignment Operators
 
 // =
@@ -183,7 +181,6 @@
 // null
 // let p = null;
 
-
 // 6. Symbol(ES2015); Value that is unique and cannot be changed(Not useful for now)
 // const person = {
 //     firstName: "John",
@@ -196,9 +193,7 @@
 //   person[id] = 140353;
 //   console.log(person[id]);
 
-
 // Truthy and Falsy Values
-
 
 // 5 falsy values: 0, '', undefined, null, NaN
 // console.log(Boolean(0));
@@ -233,16 +228,14 @@ hello();
 
 //   perameter function
 function addTwoNumbers(number1, number2) {
-  let result = number1 + number2
-  return result
+  let result = number1 + number2;
+  return result;
   // result number1+number2
 }
 
-const result = addTwoNumbers(5, 4)
+const result = addTwoNumbers(5, 4);
 
 console.log("result:", result);
-
-
 
 // Function declaration
 show();
@@ -253,40 +246,37 @@ function show() {
 // Function expression
 let sameName = function show() {
   console.log("sohan");
-}
+};
 sameName();
-
 
 // Function anonymous
 let sameName1 = function () {
   console.log("sohan1");
-}
+};
 sameName1();
 
 //arrow function
 const h = (x, y, z = 30) => {
   console.log(x + " " + y + " " + z); //10 20 30
-  console.log(x + y + z);//60
-
-}
+  console.log(x + y + z); //60
+};
 
 h(10, 20);
-
 
 function second_func(greeting, message, name) {
   console.log(`${greeting} ${name} ${message} `);
 }
 
-second_func("sohan is learing", 'from GeeksForGeeks', 'JavaScript');
+second_func("sohan is learing", "from GeeksForGeeks", "JavaScript");
 
 // this.
 const person = {
   name: "ram",
   age: 22,
   greet: function () {
-    return `Hello ${this.name}, you are ${this.age} years old`
-  }
-}
+    return `Hello ${this.name}, you are ${this.age} years old`;
+  },
+};
 console.log(person.greet());
 
 // constructor function
@@ -297,7 +287,59 @@ function Fruit(color, taste, seeds) {
 }
 
 // Create an object
-const fruit1 = new Fruit('Yellow', 'Sweet', 1);
+const fruit1 = new Fruit("Yellow", "Sweet", 1);
 
 // Display the result
 console.log(fruit1.color);
+
+// foreach vs map
+//foreach
+// The forEach() method does not returns a  new array based on the given array.
+// The forEach() method returns “undefined“.
+// The forEach() method doesn’t return anything hence the method chaining technique cannot be applied here.
+// It is not executed for empty elements.
+
+const numbers = [1, 2, 3, 4];
+
+numbers.forEach((number) => {
+  console.log(number * 2);
+});
+
+//map
+// The map() method returns an entirely new array.
+// returns “undefined“.	The map() method returns the newly created array according to the provided callback function.
+// With the map() method, we can chain other methods like, reduce(),sort() etc.
+// It does not change the original array.
+
+const number1 = [1, 2, 3, 4];
+
+const doubledNumbers = number1.map((number) => {
+  return number * 2;
+});
+
+console.log(doubledNumbers);
+
+///////////////
+// "use strict";
+a = 10;
+b = 20;
+console.log(a + b);
+
+// querySelector//method returns the first element that matches a CSS selector.
+// document.querySelector(".message").textContent = "Too low!";
+
+// querySelectorAll//method returns all elements that matches a CSS selector(s).
+// document.querySelectorAll(".message").textContent = "Too low!";
+
+// textContent//it return same as it is writen in html tag with space.
+// Math.random()//returns a random number between 0 (inclusive),  and 1 (exclusive):
+// let secretNumber = Math.trunc(Math.random() * 20) + 1;
+
+// Math.trunc()// static method returns the integer part of a number by removing any fractional digits.
+// console.log(Math.trunc(13.37));
+
+// addEventListener()//method attaches an event handler to the specified element.
+// document.querySelector(".again").addEventListener("click", function () {});
+
+// removeEventListener()//You can easily remove an event listener by using the removeEventListener() method.
+// method removes an event handler from an element.
