@@ -68,6 +68,12 @@ h1 {
   left: 50%;
   transform: translate(-50%, 50%);
 }
+/* used to style the outer part of the spinner button of number picker input elements */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  /* margin: 0; */
+}
 
 .between {
   font-size: 1.4rem;
@@ -116,4 +122,36 @@ h1 {
 
 .label-score {
   margin-bottom: 2rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  color: #000;
+  background-color: white;
+  padding: 6rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+
+
+
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
 }

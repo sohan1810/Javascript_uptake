@@ -218,79 +218,79 @@
 
 // Functions
 // simple function
-hello();
-function hello() {
-  console.log("hello have are you");
-}
+// hello();
+// function hello() {
+//   console.log("hello have are you");
+// }
 
-hello();
-hello();
+// hello();
+// hello();
 
-//   perameter function
-function addTwoNumbers(number1, number2) {
-  let result = number1 + number2;
-  return result;
-  // result number1+number2
-}
+// //   perameter function
+// function addTwoNumbers(number1, number2) {
+//   let result = number1 + number2;
+//   return result;
+//   // result number1+number2
+// }
 
-const result = addTwoNumbers(5, 4);
+// const result = addTwoNumbers(5, 4);
 
-console.log("result:", result);
+// console.log("result:", result);
 
-// Function declaration
-show();
-function show() {
-  console.log("sohan");
-}
+// // Function declaration
+// show();
+// function show() {
+//   console.log("sohan");
+// }
 
-// Function expression
-let sameName = function show() {
-  console.log("sohan");
-};
-sameName();
+// // Function expression
+// let sameName = function show() {
+//   console.log("sohan");
+// };
+// sameName();
 
-// Function anonymous
-let sameName1 = function () {
-  console.log("sohan1");
-};
-sameName1();
+// // Function anonymous
+// let sameName1 = function () {
+//   console.log("sohan1");
+// };
+// sameName1();
 
-//arrow function
-const h = (x, y, z = 30) => {
-  console.log(x + " " + y + " " + z); //10 20 30
-  console.log(x + y + z); //60
-};
+// //arrow function
+// const h = (x, y, z = 30) => {
+//   console.log(x + " " + y + " " + z); //10 20 30
+//   console.log(x + y + z); //60
+// };
 
-h(10, 20);
+// h(10, 20);
 
-function second_func(greeting, message, name) {
-  console.log(`${greeting} ${name} ${message} `);
-}
+// function second_func(greeting, message, name) {
+//   console.log(`${greeting} ${name} ${message} `);
+// }
 
-second_func("sohan is learing", "from GeeksForGeeks", "JavaScript");
+// second_func("sohan is learing", "from GeeksForGeeks", "JavaScript");
 
-// this.
-const person = {
-  name: "ram",
-  age: 22,
-  greet: function () {
-    return `Hello ${this.name}, you are ${this.age} years old`;
-  },
-};
-console.log(person.greet());
+// // this.
+// const person = {
+//   name: "ram",
+//   age: 22,
+//   greet: function () {
+//     return `Hello ${this.name}, you are ${this.age} years old`;
+//   },
+// };
+// console.log(person.greet());
 
-// constructor function
-function Fruit(color, taste, seeds) {
-  this.color = color;
-  this.taste = taste;
-  this.seeds = seeds;
-}
+// // constructor function
+// function Fruit(color, taste, seeds) {
+//   this.color = color;
+//   this.taste = taste;
+//   this.seeds = seeds;
+// }
 
-// Create an object
-const fruit1 = new Fruit("Yellow", "Sweet", 1);
+// // Create an object
+// const fruit1 = new Fruit("Yellow", "Sweet", 1);
 
-// Display the result
-console.log(fruit1.color);
+// // Display the result
+// console.log(fruit1.color);
 
 // foreach vs map
 //foreach
@@ -314,16 +314,16 @@ numbers.forEach((number) => {
 const number1 = [1, 2, 3, 4];
 
 const doubledNumbers = number1.map((number) => {
-  return number * 2;
+  return number + 10;
 });
 
 console.log(doubledNumbers);
 
 ///////////////
 // "use strict";
-a = 10;
-b = 20;
-console.log(a + b);
+// a = 10;
+// b = 20;
+// console.log(a + b);
 
 // querySelector//method returns the first element that matches a CSS selector.
 // document.querySelector(".message").textContent = "Too low!";

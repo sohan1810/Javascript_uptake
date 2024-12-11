@@ -7,12 +7,12 @@ const overlay = document.querySelector(".overlay");
 const btnCloseModal = document.querySelector(".close-modal");
 
 const btnOpenModel = document.querySelectorAll(".show-modal");
-console.log(btnOpenModel);
+// console.log(btnOpenModel);
 
 for (let i = 0; i < btnOpenModel.length; i++)
   btnOpenModel[i].addEventListener("click", function () {
     console.log("Button clicked");
-    modal.classList.remove("hidden");
+    modal.classList.remove("hidden");//classlist returns the CSS classnames of an element.
     overlay.classList.remove("hidden");
   });
 

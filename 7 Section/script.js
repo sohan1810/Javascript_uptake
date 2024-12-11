@@ -1,6 +1,6 @@
 "use strict";
 
-console.log(document.querySelector(".message").textContent);
+// console.log(document.querySelector(".message").textContent);
 // document.querySelector('.message').textContent = '🎉 Correct Number!';
 
 // document.querySelector('.number').textContent = 13;
@@ -15,7 +15,7 @@ let highscore = 0;
 
 // document.querySelector(".guess").value = 20;
 /////// Number display ///////
-// document.querySelector(".number").textContent = secretNumber;
+document.querySelector(".number").textContent = secretNumber;
 
 /////// check Number///////
 document.querySelector(".check").addEventListener("click", function () {
@@ -44,10 +44,11 @@ document.querySelector(".check").addEventListener("click", function () {
     if (score > 1) {
       document.querySelector(".message").textContent = "Too high!";
       score--;
-      document.querySelector("score").textContent = score;
+      document.querySelector(".score").textContent = score;
     } else {
       document.querySelector(".message").textContent = " You lost the game ";
       document.querySelector(".score").textContent = 0;
+      document.querySelector("body").style.backgroundColor = "#ff3200";
     }
 
     // When player Too low
@@ -75,14 +76,65 @@ document.querySelector(".again").addEventListener("click", function () {
 
   document.querySelector(".score").textContent = score;
 
-  document.querySelector(".number").textContent = "?";
-  // document.querySelector(".number").textContent = secretNumber;
+  // document.querySelector(".number").textContent = "?";
+  document.querySelector(".number").textContent = secretNumber;
 
-  // document.querySelector(".guess").value = "20";
+  document.querySelector(".guess").value = "";
 
   document.querySelector("body").style.backgroundColor = "#222";
 
   // document.querySelector(".number").style.width = "15rem";
+});
+
+const messageElement = document.querySelector(".message");
+const guessInput = document.querySelector(".guess");
+const btnCheck = document.querySelector(".check");
+const modal = document.querySelector(".modal");
+const overlay = document.querySelector(".overlay");
+const closeModal = document.querySelector(".close-modal");
+
+function displayMessage(message) {
+  messageElement.textContent = message;
+}
+
+function openModal() {
+  modal.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+}
+
+function closeModalWindow() {
+  modal.classList.add("hidden");
+  overlay.classList.add("hidden");
+}
+
+btnCheck.addEventListener("click", function () {
+  const guess = Number(guessInput.value);
+
+  if (guess === secretNumber) {
+    openModal();
+  }
+});
+
+closeModalWindow();
+closeModal.addEventListener("click", closeModalWindow);
+overlay.addEventListener("click", closeModalWindow);
+
+btnCheck.addEventListener("click", function () {
+  const guess = Number(guessInput.value);
+
+  if (guess === secretNumber) {
+    openModal();
+  }
+});
+document.addEventListener("keydown", function (e) {
+  console.log(e.key);
+
+  if (e.key === "Escape") {
+    if (!modal.classList.contains("hidden")) {
+      modal.classList.add("hidden");
+      overlay.classList.add("hidden");
+    }
+  }
 });
 
 // Coding Challenge #1
