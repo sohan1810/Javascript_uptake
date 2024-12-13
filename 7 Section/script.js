@@ -31,15 +31,15 @@ document.querySelector(".check").addEventListener("click", function () {
   } else if (guess === secretNumber) {
     document.querySelector(".message").textContent = "🎉 Correct Number!";
     /////// Number display ///////
-    // document.querySelector(".number").textContent = secretNumber;
+    document.querySelector(".number").textContent = secretNumber;
 
     document.querySelector("body").style.backgroundColor = "#60b347";
     ///////display highscore ///////
     if (score > highscore) {
       highscore = score;
       document.querySelector(".highscore").textContent = highscore;
-    } else if (guess !== secretNumber) {
-    }
+    } //else if (guess !== secretNumber) {
+    // }
   } else if (guess > secretNumber) {
     if (score > 1) {
       document.querySelector(".message").textContent = "Too high!";
@@ -86,12 +86,30 @@ document.querySelector(".again").addEventListener("click", function () {
   // document.querySelector(".number").style.width = "15rem";
 });
 
+// Coding Challenge #1
+
+/* 
+Implement a game rest functionality, so that the player can make a new guess! Here is how:
+
+1. Select the element with the 'again' class and attach a click event handler
+2. In the handler function, restore initial values of the score and secretNumber variables
+3. Restore the initial conditions of the message, number, score and guess input field
+4. Also restore the original background color (#222) and number width (15rem)
+
+GOOD LUCK 😀
+*/
+
+////////////////////////////////////////////////////////////////////////////////
 const messageElement = document.querySelector(".message");
 const guessInput = document.querySelector(".guess");
 const btnCheck = document.querySelector(".check");
 const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
 const closeModal = document.querySelector(".close-modal");
+const scoreElement = document.querySelector(".score");
+const highscoreElement = document.querySelector(".highscore");
+const messageDisplay = document.querySelector(".message");
+const numberDisplay = document.querySelector(".number");
 
 function displayMessage(message) {
   messageElement.textContent = message;
@@ -112,20 +130,20 @@ btnCheck.addEventListener("click", function () {
 
   if (guess === secretNumber) {
     openModal();
+
+    modal.querySelector('h1').textContent = `You won 😍 Score: ${score}`;
+    modal.classList.remove('hidden');
+    overlay.classList.remove('hidden');
   }
+
+  scoreElement();
 });
 
 closeModalWindow();
+
 closeModal.addEventListener("click", closeModalWindow);
 overlay.addEventListener("click", closeModalWindow);
 
-btnCheck.addEventListener("click", function () {
-  const guess = Number(guessInput.value);
-
-  if (guess === secretNumber) {
-    openModal();
-  }
-});
 document.addEventListener("keydown", function (e) {
   console.log(e.key);
 
@@ -136,16 +154,3 @@ document.addEventListener("keydown", function (e) {
     }
   }
 });
-
-// Coding Challenge #1
-
-/* 
-Implement a game rest functionality, so that the player can make a new guess! Here is how:
-
-1. Select the element with the 'again' class and attach a click event handler
-2. In the handler function, restore initial values of the score and secretNumber variables
-3. Restore the initial conditions of the message, number, score and guess input field
-4. Also restore the original background color (#222) and number width (15rem)
-
-GOOD LUCK 😀
-*/
