@@ -15,7 +15,7 @@ let highscore = 0;
 
 // document.querySelector(".guess").value = 20;
 /////// Number display ///////
-document.querySelector(".number").textContent = secretNumber;
+// document.querySelector(".number").textContent = secretNumber;
 
 /////// check Number///////
 document.querySelector(".check").addEventListener("click", function () {
@@ -76,8 +76,8 @@ document.querySelector(".again").addEventListener("click", function () {
 
   document.querySelector(".score").textContent = score;
 
-  // document.querySelector(".number").textContent = "?";
-  document.querySelector(".number").textContent = secretNumber;
+  document.querySelector(".number").textContent = "?";
+  // document.querySelector(".number").textContent = secretNumber;
 
   document.querySelector(".guess").value = "";
 

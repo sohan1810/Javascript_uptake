@@ -17,12 +17,12 @@
 //scoping : that will be control the how scoping will executing the code like blcok scope
 //lexical scoping
 //scope are local ,global,
-function a(b) {
-  const age = 2024 - b;
-  return age;
-}
-const c = d(1991);
-console.log(c); // this is global scope
+// function a(b) {
+//   const age = 2024 - b;
+//   return age;
+// }
+// const c = d(1991);
+// console.log(c); // this is global scope
 
 // A JavaScript engine is a computer program that executes JavaScript code and converts it into computer understandable language.
 // Google Chrom = V8
@@ -125,9 +125,9 @@ function deleteShoppingCart() {
   console.log("All products deleted!");
 }
 
-var x = 1;
-let y = 2;
-const z = 3;
+// var x = 1;
+// let y = 2;
+// const z = 3;
 
 console.log(x === window.x);
 console.log(y === window.y);
@@ -257,3 +257,126 @@ console.log('Before marriage:', jessica2);
 console.log('After marriage: ', jessicaCopy);
 
 */
+"use strict";
+
+// this how reminds us that how javascript long codes are executed the insie the call stack in js
+//call stack executed  fucntons arguments objects declertions inside the call stack
+//understood the how global execution work
+//you can store store multiple execution on call stack
+
+//high level
+//object orinted
+//multi progrmed
+//single-thread
+//garbage-collected
+//first-classfunction
+//daynamic
+//Non-event Blocking
+
+//scoping : that will be control the how scoping will executing the code like blcok scope
+//lexical scoping
+//scope are local ,global,
+// function a(b) {
+//   const age = 2024 - b;
+//   return age;
+// }
+// const c = d(1991);
+// console.log(c); // this is global scope
+
+// A JavaScript engine is a computer program that executes JavaScript code and converts it into computer understandable language.
+// Google Chrom = V8
+// Edge = (Internet Explorer)	Chakra
+// Mozilla Firefox = Spider Monkey
+// Safari =	Javascript Core Webkit
+
+//morde JUST IN TIME COMMPILWR : parsing >> compilation >> Execution
+
+// Compilation
+// In this method, all the code is converted to machine language at once, and then written to a file in assembly,
+// so that the computer can run the software, which can happen even a long time after the file was created.
+
+// Interpretation
+// In this method, the Interpreter goes through the code in an initial pass and then executes it line by line.
+// During the runtime, while running line by line, the code is also compiled into machine language.
+
+// Just-in-time compilation in JavaScript
+// Now we will talk about how just-in-time compilation is performed in real time in JavaScript.
+
+// Scoping in Practice scope chain
+// Global Scoped letiable
+// let global_letiable = "sohan";
+
+// // First function...
+// function first_function() {
+//   return global_letiable;
+// }
+
+// // Second function...
+// function second_function() {
+//   return first_function();
+// }
+
+// console.log(second_function());
+
+// // Hoisting
+// // Declarations are hoisted, not initializations.
+// // Allows calling functions before their declarations.
+// // All variable and function declarations are processed before any code execution.
+// // Undeclared variables are implicitly created as global variables when assigned a value.
+// console.log(num);
+// console.log(me);
+// console.log(year);
+
+// var num = 22;//there are hoist but there are undefined.
+// let me = "sohan";
+// const year = 2024;
+
+// //function var
+// function fun() {
+//   console.log(name);
+//   var name = 'sohan';
+// }
+// fun();//undefined
+
+// fun(); // Calling before declaration
+
+// function fun() { // Declaring
+//   console.log("Function is hoisted");
+// }
+
+// // Functions
+// console.log(addDecl(2, 3));
+// // console.log(addExpr(2, 3));
+// // console.log(addArrow);
+// // console.log(addArrow(2, 3));
+
+// function addDecl(a, b) {
+//   return a + b;
+// }
+
+// var addExpr = function (a, b) {
+//   return a + b;
+// };
+
+// var addArrow = (a, b) => a + b;
+
+//////////////////////////////////
+console.log();
+if (!numProducts) deleteShoppingCart();
+
+var numProducts = 10;
+
+function deleteShoppingCart() {
+  console.log("All products deleted!");
+}
+
+var x = 1;
+let y = 2;
+const z = 3;
+
+console.log(x === window.x);
+console.log(y === window.x);
+console.log(z === window.x);
+
+// Browser Object Model (BOM)
+// Browser Object Model (BOM) is a programming interface JavaScript tool for working with web browsers. 
