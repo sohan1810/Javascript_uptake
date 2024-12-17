@@ -244,8 +244,7 @@ console.log("---- AND ----");
 console.log(0 && "Jonas");
 console.log(7 && "Jonas");
 
-
-// / The nullish coalescing operator (??) is a JavaScript operator that is used to provide 
+// / The nullish coalescing operator (??) is a JavaScript operator that is used to provide
 // a default value for a variable that may be null or undefined.
 
 // In JavaScript, the following values are considered falsy:
@@ -253,10 +252,9 @@ console.log(7 && "Jonas");
 
 //only null, undefined it will pass default value.
 
-let num =5;
-const num1= num ?? 11;
+let num = 5;
+const num1 = num ?? 11;
 console.log(num1);
-
 
 // Coding Challenge #1
 
@@ -316,18 +314,17 @@ const game = {
 const [players1, players2] = game.players;
 console.log(players1, players2);
 
-// 2. The first player in any player array is the goalkeeper and the others are field players. 
-// For Bayern Munich (team 1) create one variable ('gk') with the goalkeeper's name, and one array 
+// 2. The first player in any player array is the goalkeeper and the others are field players.
+// For Bayern Munich (team 1) create one variable ('gk') with the goalkeeper's name, and one array
 // ('fieldPlayers') with all the remaining 10 field players
 const [gk, ...fieldPlayers] = players1;
 console.log(gk, fieldPlayers);
-
 
 // 3. Create an array 'allPlayers' containing all players of both teams (22 players)
 const allPlayers = [...players1, ...players2];
 console.log(allPlayers);
 
-// 4. During the game, Bayern Munich (team 1) used 3 substitute players. So create a new array 
+// 4. During the game, Bayern Munich (team 1) used 3 substitute players. So create a new array
 // ('players1Final') containing all the original team1 players plus 'Thiago', 'Coutinho' and 'Perisic'
 const players1Final = [...players1, "sohan", "sahil", "dev"];
 console.log(players1Final);
@@ -338,8 +335,8 @@ const {
 } = game;
 console.log(team1, draw, team2);
 
-// 6. Write a function ('printGoals') that receives an arbitrary number of player names (NOT an array) 
-// and prints each of them to the console, along with the number of goals that were scored in total 
+// 6. Write a function ('printGoals') that receives an arbitrary number of player names (NOT an array)
+// and prints each of them to the console, along with the number of goals that were scored in total
 // (number of player names passed in)
 const printGoals = function (...players) {
   console.log(players);
@@ -350,15 +347,15 @@ const printGoals = function (...players) {
 // printGoals('Davies', 'Muller');//2 goals were scored
 printGoals(...game.scored);
 
-team1 < team2 && console.log('Team 1 is more likely to win');
-team1 > team2 && console.log('Team 2 is more likely to win');
+team1 < team2 && console.log("Team 1 is more likely to win");
+team1 > team2 && console.log("Team 2 is more likely to win");
 
 const menu = [...allPlayers];
 
 for (const item of menu) console.log(item);
 
 // The for-of Loop
-const array1 = ['a', 'b', 'c'];
+const array1 = ["a", "b", "c"];
 
 for (const element of array1) {
   console.log(element);
@@ -374,27 +371,103 @@ for (const element of array1) {
 
 let n = "name";
 var obj = {
-    [n]:"sohan",
-    age : 22
+  [n]: "sohan",
+  age: 22,
 };
 console.log(obj);
 
 let m = "first";
 var obj = {
-    [m + " name"]:"sohan",
-    age : 22
+  [m + " name"]: "sohan",
+  age: 22,
 };
 console.log(obj);
-
 
 let s = "first";
 var obj = {
-    [s + "name"]:"sohan",
-    age : 22,
-    detail: function(){
-        return `${this.firstname} age is ${this.age}`
-    }
+  [s + "name"]: "sohan",
+  age: 22,
+  detail: function () {
+    return `${this.firstname} age is ${this.age}`;
+  },
 };
 console.log(obj);
 console.log(obj.detail());
+
+// Optional Chaining
+const user = {
+  name: "John",
+  age: 30,
+  address: {
+    street: "Main St",
+    city: "New York",
+    state: "NY",
+    zip: 10001,
+  },
+};
+console.log(user?.address?.zip); // 10001
+console.log(user?.phone?.number);
+
+// Object.keys pass key values of object in array (output array)
+
+const object1 = {
+  a: "somestring",
+  b: 42,
+  c: false,
+};
+console.log(Object.keys(object1));
+
+// Object.values return an array of the property values of a object (output array)
+
+const object2 = {
+  a: "somestring",
+  b: 42,
+  c: false,
+};
+console.log(Object.values(object2));
+
+// object.entries return an array of the key/value pairs of an object (output string)
+
+const object3 = {
+  a: "somestring",
+  b: 42,
+};
+
+for (const [key, value] of Object.entries(object3)) {
+  console.log(`${key}: ${value}`);
+}
+
+//sets
+// A JavaScript Set is a collection of unique values.
+// Each value can only occur once in a Set.
+// The values can be of any type, primitive values or objects.
+
+let s1 = new Set([10, 30, 30, 40, 40]);
+console.log(s1);
+
+//maps
+// A Map holds key-value pairs where the keys can be any datatype.
+// A Map remembers the original insertion order of the keys.
+
+const map1 = new Map();
+
+map1.set("a", 1);
+map1.set("b", 2);
+map1.set("c", 3);
+
+console.log(map1.get("a"));
+// Expected output: 1
+
+map1.set("a", 97);
+
+console.log(map1.get("a"));
+// Expected output: 97
+
+console.log(map1.size);
+// Expected output: 3
+
+map1.delete("b");
+
+console.log(map1.size);
+// Expected output: 2
 
