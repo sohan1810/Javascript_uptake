@@ -120,7 +120,7 @@ restaurantCopy.name = 'Ristorante Roma';
 console.log(restaurantCopy.name);
 console.log(restaurant.name);
 
-*/
+
 
 // let user = [, 22, "sangli",['mail']];
 // // let [name1, age, city] = user;
@@ -369,44 +369,44 @@ for (const element of array1) {
 // };
 // console.log(obj);
 
-let n = "name";
-var obj = {
-  [n]: "sohan",
-  age: 22,
-};
-console.log(obj);
+// let n = "name";
+// var obj = {
+//   [n]: "sohan",
+//   age: 22,
+// };
+// console.log(obj);
 
-let m = "first";
-var obj = {
-  [m + " name"]: "sohan",
-  age: 22,
-};
-console.log(obj);
+// let m = "first";
+// var obj = {
+//   [m + " name"]: "sohan",
+//   age: 22,
+// };
+// console.log(obj);
 
-let s = "first";
-var obj = {
-  [s + "name"]: "sohan",
-  age: 22,
-  detail: function () {
-    return `${this.firstname} age is ${this.age}`;
-  },
-};
-console.log(obj);
-console.log(obj.detail());
+// let s = "first";
+// var obj = {
+//   [s + "name"]: "sohan",
+//   age: 22,
+//   detail: function () {
+//     return `${this.firstname} age is ${this.age}`;
+//   },
+// };
+// console.log(obj);
+// console.log(obj.detail());
 
-// Optional Chaining
-const user = {
-  name: "John",
-  age: 30,
-  address: {
-    street: "Main St",
-    city: "New York",
-    state: "NY",
-    zip: 10001,
-  },
-};
-console.log(user?.address?.zip); // 10001
-console.log(user?.phone?.number);
+// // Optional Chaining
+// const user = {
+//   name: "John",
+//   age: 30,
+//   address: {
+//     street: "Main St",
+//     city: "New York",
+//     state: "NY",
+//     zip: 10001,
+//   },
+// };
+// console.log(user?.address?.zip); // 10001
+// console.log(user?.phone?.number);
 
 // Object.keys pass key values of object in array (output array)
 
@@ -470,4 +470,173 @@ map1.delete("b");
 
 console.log(map1.size);
 // Expected output: 2
+
+/* 
+// Coding Challenge #2
+Let's continue with our football betting app!
+
+1. Loop over the game.scored array and print each player name to the console, along with the goal number (Example: "Goal 1: Lewandowski")
+2. Use a loop to calculate the average odd and log it to the console (We already studied how to calculate averages, you can go check if you don't remember)
+3. Print the 3 odds to the console, but in a nice formatted way, exaclty like this:
+      Odd of victory Bayern Munich: 1.33
+      Odd of draw: 3.25
+      Odd of victory Borrussia Dortmund: 6.5
+Get the team names directly from the game object, don't hardcode them (except for "draw"). HINT: Note how the odds and the game objects have the same property names 😉
+
+BONUS: Create an object called 'scorers' which contains the names of the players who scored as properties, and the number of goals as the value. In this game, it will look like this:
+      {
+        Gnarby: 1,
+        Hummels: 1,
+        Lewandowski: 2
+      }
+
+GOOD LUCK 😀
+
+// 1.
+for (const [i, player] of game.scored.entries())
+  console.log(`Goal ${i + 1}: ${player}`);
+
+// 2.
+const odds = Object.values(game.odds);
+let average = 0;
+for (const odd of odds) 
+average += odd;
+average /= odds.length;
+console.log(average);
+
+// 3.
+for (const [team, odd] of Object.entries(game.odds)) {
+  console.log(team,odd);//display game.odds 
+  const teamStr = team === 'x' ? 'draw' : `victory ${game[team]}`;
+  console.log(`Odd of ${teamStr} ${odd}`);
+}
+*/
+
+//map iteration in javascript
+let question = new Map([
+  ["question", "What is the best programming language"],
+  [1, "c"],
+  [2, "java"],
+  [3, "JS"],
+  ["correct", 3],
+  [true, "correct"],
+  [false, "try again"],
+]);
+// Log the Map
+console.log(question);
+
+//  CONVERT MAP TO ARRAY AGAIN
+// Convert Map to Array
+console.log(Array.from(question));
+
+//  CONVERT OBJECT TO MAP AGAIN
+const obj = {
+  user1: "John",
+  user2: "Kate",
+  user3: "Peter",
+};
+const map = new Map(Object.entries(obj));
+
+console.log(map);
+
+//Quizz App
+//here wr get the QQuestion and anser in key values format
+//object is not litrals so we convert in to the litrels
+for (const [key, values] of question) {
+  console.log(`${key} = ${values}`);
+}
+
+
+console.log([...question]);
+// console.log(question.entries());
+console.log([...question.keys()]);
+console.log([...question.values()]);
+
+// Coding Challenge #3
+
+/* 
+Let's continue with our football betting app! This time, we have a map with a log of the events that happened during the game. The values are the events themselves, and the keys are the minutes in which each event happened (a football game has 90 minutes plus some extra time).
+
+1. Create an array 'events' of the different game events that happened (no duplicates)
+2. After the game has finished, is was found that the yellow card from minute 64 was unfair. So remove this event from the game events log.
+3. Print the following string to the console: "An event happened, on average, every 9 minutes" (keep in mind that a game has 90 minutes)
+4. Loop over the events and log them to the console, marking whether it's in the first half or second half (after 45 min) of the game, like this:
+      [FIRST HALF] 17: ⚽️ GOAL
+
+GOOD LUCK 😀
+
+
+
+const gameEvents = new Map([
+  [17, '⚽️ GOAL'],
+  [36, '🔁 Substitution'],
+  [47, '⚽️ GOAL'],
+  [61, '🔁 Substitution'],
+  [64, '🔶 Yellow card'],
+  [69, '🔴 Red card'],
+  [70, '🔁 Substitution'],
+  [72, '🔁 Substitution'],
+  [76, '⚽️ GOAL'],
+  [80, '⚽️ GOAL'],
+  [92, '🔶 Yellow card'],
+]);
+
+// 1.
+const events = [...new Set(gameEvents.values())];
+console.log(events);
+
+// 2.
+gameEvents.delete(64);
+console.log(gameEvents);
+
+// 3.
+console.log(
+  `An event happened, on average, every ${90 / gameEvents.size} minutes`
+);
+
+// 4.
+for (const [min, event] of gameEvents) {
+  const half = min <= 45 ? 'FIRST' : 'SECOND';
+  console.log(`[${half} HALF] ${min}: ${event}`);
+}
+*/
+
+// Working With Strings - Part 1
+const airline = 'Tap Air India';
+const airline1 = '   Tap Air Indin    .';
+const plane = 'A320';
+
+console.log(plane[0]);
+console.log(plane[1]);
+console.log(plane[2]);
+console.log('B737'[0]);
+
+console.log(airline.length);
+console.log('B737'.length);
+
+console.log(airline.indexOf('r'));
+console.log(airline.lastIndexOf('i'));
+console.log(airline.indexOf('India'));
+console.log(airline.slice(4));
+console.log(airline.slice(4, 7));
+console.log(airline1.trim());
+console.log(airline.replace("Tap", 'my'));
+console.log(airline.includes('Air'));
+console.log(airline.startsWith('Air',4));
+console.log(airline.endsWith('India'));
+let airline2 = ["sohan", "sahil", "abhay", "dev"]
+console.log(airline2.join("_"));
+
+const maskCreditCard = function (number) {
+  const str = number + '';
+  const last = str.slice(1, 5);
+  return last.padEnd(str.length, '*');
+};
+
+console.log(maskCreditCard(64637836));
+console.log(maskCreditCard(3378463864647384));
+console.log(maskCreditCard('334859493847755774747'));
+
+const airline99 = 'Tap Air India.';
+console.log(airline99.repeat(10));
 
